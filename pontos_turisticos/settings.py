@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['pontos-turisticos-curso.herokuapp.com', 'localhost:8000']
+ALLOWED_HOSTS = ['pontos-turisticos-curso.herokuapp.com', 'localhost']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -122,7 +122,4 @@ MEDIA_ROOT = 'imagens'
 
 MEDIA_URL = '/media/'
 
-REST_FRAMEWORK = {
-    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
-}
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
